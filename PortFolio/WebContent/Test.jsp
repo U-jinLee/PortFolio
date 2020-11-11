@@ -1,8 +1,8 @@
 <%@ page import="java.sql.*" %>
 <%@ page import="javax.sql.*" %>
 <%@ page import="javax.naming.*" %>
-<%@ page language="java" contentType="text/html; charset=EUC-KR"
-    pageEncoding="EUC-KR"%>
+<%@ page language="java" contentType="text/html; charset=UTF-8"
+    pageEncoding="UTF-8"%>
 <!DOCTYPE html>
 <html>
 <head>
@@ -17,10 +17,10 @@ try{
 	Context init = new InitialContext();
 	DataSource ds = (DataSource)init.lookup("java:comp/env/jdbc/mysql");
 	conn = ds.getConnection();
-	out.print("<h3>¿¬°á¼º°ø</h3>");
+	out.print("<h3>ì—°ê²°ì„±ê³µ</h3>");
 } catch(Exception e){
 	e.printStackTrace();
-	out.print("<h3>¿¬°á½ÇÆÐ</h3>");
+	out.print("<h3>ì—°ê²°ì‹¤íŒ¨</h3>");
 } finally{
 	conn.close();
 }
