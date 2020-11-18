@@ -1,7 +1,7 @@
 <%@ page language="java" contentType="text/html; charset=UTF-8"
     pageEncoding="UTF-8"%>
 <!DOCTYPE html>
-<html lang="en">
+<html lang="ko">
 <head>
     <link rel="stylesheet" href="css/default.css">
     <link rel="stylesheet" href="css/style.css">
@@ -12,11 +12,7 @@
 <body>
     <section class="login"> <!--X, Y축 자체가 가운데 정렬이 필요-->
         <h2>로그인</h2>
-        <form action="LoginAction.login" method="post">
-        <input type="text" placeholder="아이디"  name="user_id">
-        <input type="password" placeholder="비밀번호" name="user_pw">
-        <button type="submit">로그인</button>
-        <!-- 
+        <form action="LoginAction.login" method="post"> 
 	        <ul>
 	            <li> <input type="text" placeholder="아이디" title="아이디 입력" name="user_id"></li>
 	            <li> <input type="password" placeholder="비밀번호" title="비밀번호 입력" name="user_pw"></li>
@@ -24,7 +20,6 @@
 	            <li> <button type="submit">로그인</button></li>
 	            <li> <button id="kakao">카카오 로그인</button></li>
 	        </ul>
-	      -->   
         </form>
         
         <div>
