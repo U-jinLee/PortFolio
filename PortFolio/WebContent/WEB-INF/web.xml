@@ -1,16 +1,19 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<web-app version="4.0" xmlns="http://xmlns.jcp.org/xml/ns/javaee" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://xmlns.jcp.org/xml/ns/javaee                       http://xmlns.jcp.org/xml/ns/javaee/web-app_4_0.xsd">
+<web-app version="4.0" xmlns="http://xmlns.jcp.org/xml/ns/javaee"
+xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+xsi:schemaLocation="http://xmlns.jcp.org/xml/ns/javaee
+                       http://xmlns.jcp.org/xml/ns/javaee/web-app_4_0.xsd">
 
 
     <servlet>
     	<!-- 서블렛 네임 및 서블렛 클래스의 풀네임을 입력한다.-->
-        <servlet-name>MemberFrontController</servlet-name>
-        <servlet-class>net.member.action.MemberFrontController</servlet-class>
+        <servlet-name>LoginFrontController</servlet-name>
+        <servlet-class>net.Login.action.LoginFrontController</servlet-class>
     </servlet>
 		<!-- 서블렛 네임 및 url-pattern 설정.-->
     <servlet-mapping>
-        <servlet-name>MemberFrontController</servlet-name>
-        <url-pattern>*.me</url-pattern>
+        <servlet-name>LoginFrontController</servlet-name>
+        <url-pattern>*.login</url-pattern>
     </servlet-mapping>
 
 
