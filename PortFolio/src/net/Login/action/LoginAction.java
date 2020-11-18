@@ -21,8 +21,15 @@ public class LoginAction implements Action {
 		
 		System.out.println(i);
 		
-		forward.setRedirect(true);
-		forward.setPath("sueecss.jsp");
+		if(i == 1) {
+			request.setAttribute("SessionID",ldto.getUser_id());
+			forward.setRedirect(false);
+			forward.setPath("success.jsp");
+		}
+		if(i == 0) {
+			forward.setRedirect(true);
+			forward.setPath("fail.jsp");
+		}
 		return forward;
 	}
 
