@@ -2,6 +2,7 @@ package net.Login.action;
 
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
+import javax.servlet.http.HttpSession;
 
 import net.Login.db.*;
 
@@ -18,12 +19,12 @@ public class LoginAction implements Action {
 		ldto.setUser_pw(request.getParameter("user_pw"));
 		
 		int i = ldao.login(ldto);
-		
 		System.out.println(i);
 		
 		if(i == 1) {
-			request.setAttribute("SessionID",ldto.getUser_id());
-			forward.setRedirect(false);
+			HttpSession session = request.getSession();
+			session.setAttribute("SessionID", ldto.getUser_id());
+			forward.setRedirect(true);
 			forward.setPath("success.jsp");
 		}
 		if(i == 0) {

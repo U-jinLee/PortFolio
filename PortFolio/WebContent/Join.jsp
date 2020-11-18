@@ -4,9 +4,9 @@
 <html>
 <head>
 <meta charset="UTF-8">
-<title>성공의 냄새가 난다.</title>
+<title>회원가입</title>
 </head>
 <body>
-<%= session.getAttribute("SessionID") %> 로그인 떵공~!
+🐱‍👤🐱‍👤🐱‍👤🐱‍👤🐱‍👤🐱‍👤🐱‍👤🐱‍👤🐱‍👤🐱‍👤
 </body>
 </html>
