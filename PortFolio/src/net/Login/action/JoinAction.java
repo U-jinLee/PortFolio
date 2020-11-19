@@ -21,7 +21,7 @@ public class JoinAction implements Action {
 		ldao.Join(ldto);
 		
 		forward.setRedirect(true);
-		forward.setPath("login.jsp");
+		forward.setPath("login/login.jsp");
 		return forward;
 	}
 

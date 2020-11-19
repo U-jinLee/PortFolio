@@ -23,14 +23,14 @@ public class LoginFrontController extends HttpServlet implements javax.servlet.S
 		ActionForward forward = null;
 		Action action = null;
 		
-		if(command.equals("/LoginAction.login")) {
+		if(command.equals("/login/LoginAction.login")) {
 			action = new LoginAction();
 			try {
 				forward = action.execute(request, response);
 			}catch (Exception e) {
 				e.printStackTrace();
 			}
-		} else if(command.equals("/JoinAction.login")) {
+		} else if(command.equals("/login/JoinAction.login")) {
 			action = new JoinAction();
 			try {
 				forward = action.execute(request, response);
