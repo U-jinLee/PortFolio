@@ -16,3 +16,74 @@
 	text-align: center;
 	line-height: 100%;
 }
+
+.Join form ul{
+	padding: 40px 0 33px;
+}
+
+.Join form li:nth-child(odd){
+	font-size: 16px;
+	padding: 0 0 10px;
+	color: #111
+}
+
+.Join form ul li{
+	padding: 0 0 12px;
+}
+
+.Join form ul li input {
+	border-radius:5px;
+	height:46px;
+	width: 100%;
+	box-sizing: border-box;
+	text-indent: 16px;
+}
+
+.Join form ul li input::-webkit-input-placeholder{
+	font-size: 16px; 
+	color: #9fa19f;
+}
+
+.Join button {
+	width:30%;
+	height:56px;
+	font-size:18px;
+	color:#fff; 
+	position:absolute;
+	left:50%;
+	transform:translate(-50%);
+	background-color: #666;
+	border-radius:28px;
+}
+
+#bir_wrap {
+    display: table;
+    width: 100%;
+}
+#bir_yy {
+    display: table-cell;
+    width: 130px;
+}
+#bir_mm {
+    display: table-cell;
+    width: 130px;
+    vertical-align: middle;
+}
+#bir_dd {
+    display: table-cell;
+    width: 130px;
+}
+#bir_mm, #bir_dd {
+    margin-left:10px;
+}
+select{
+	height:46px;
+	width: 130px;
+	font-size: 16px;
+	text-indent: 16px;
+	color: #9fa19f;
+}
+
+option {
+	font-size: 16px;
+}

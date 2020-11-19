@@ -10,9 +10,9 @@
     <title>Document</title>
 </head>
 <body>
-    <form action="JoinAction.login" method="POST">
-        <section class="Join">
-            <h2>회원가입</h2>
+    <section class="Join">
+    	<h2>회원가입</h2>
+    	<form action="JoinAction.login" method="POST">
             <ul>
                 <li>아이디</li>
                 <li><input type="text" title="아이디 입력" name="user_id"></li>
@@ -23,25 +23,27 @@
                 <li>이름</li>
                 <li><input type="text" title="이름 입력" name="user_name"></li>
                 <li>생년월일</li>
-                <li><input type="text" title="생년월일 입력" placeholder="년(4자)"></li>
                 <li>
-                    <select name="memberMonth" title="생년월일 입력">
-                        <option>월</option>
-                        <option value="01">01</option>
-                        <option value="02">02</option>
-                        <option value="03">03</option>
-                        <option value="04">04</option>
-                        <option value="05">05</option>
-                        <option value="06">06</option>
-                        <option value="07">07</option>
-                        <option value="08">08</option>
-                        <option value="09">09</option>
-                        <option value="10">10</option>
-                        <option value="11">11</option>
-                        <option value="12">12</option>
-                    </select>
+                	<div id="bir_wrap">
+	                	<input type="text" title="생년월일 입력" placeholder="년(4자)" id="bir_yy">                
+	                    <select name="memberMonth" title="생년월일 입력" class="birth" id="bir_mm">
+	                        <option>월</option>
+	                        <option value="01">01</option>
+	                        <option value="02">02</option>
+	                        <option value="03">03</option>
+	                        <option value="04">04</option>
+	                        <option value="05">05</option>
+	                        <option value="06">06</option>
+	                        <option value="07">07</option>
+	                        <option value="08">08</option>
+	                        <option value="09">09</option>
+	                        <option value="10">10</option>
+	                        <option value="11">11</option>
+	                        <option value="12">12</option>
+	                    </select>
+	                	<input type="text" title="생년월일 입력" placeholder="일" class="birth" id="bir_dd">
+                	</div>
                 </li>
-                <li><input type="text" title="생년월일 입력" placeholder="일"></li>
                 <li>성별</li>
                 <li>
                     <select name="user_gender" title="생년월일 입력">
@@ -53,7 +55,7 @@
                 </li>
                 <li><button type="submit">회원가입</button></li>
             </ul>    
-        </section>
-    </form>
+    	</form>
+    </section>
 </body>
 </html>

@@ -9,6 +9,7 @@ import net.Login.db.*;
 public class LoginAction implements Action {
 	
 	public ActionForward execute(HttpServletRequest request, HttpServletResponse response) throws Exception {
+		HttpSession session = request.getSession();
 		LoginDAO ldao = new LoginDAO();
 		LoginDTO ldto = new LoginDTO();
 		ActionForward forward = new ActionForward();
@@ -22,7 +23,6 @@ public class LoginAction implements Action {
 		System.out.println(i);
 		
 		if(i == 1) {
-			HttpSession session = request.getSession();
 			session.setAttribute("SessionID", ldto.getUser_id());
 			forward.setRedirect(true);
 			forward.setPath("success.jsp");
