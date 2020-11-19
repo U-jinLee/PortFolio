@@ -3,8 +3,6 @@ package net.Login.db;
 import java.sql.*;
 import javax.sql.*;
 import javax.naming.*;
-import javax.servlet.RequestDispatcher;
-import javax.servlet.http.HttpSession;
 
 
 public class LoginDAO {

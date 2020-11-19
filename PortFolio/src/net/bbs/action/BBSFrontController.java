@@ -21,8 +21,15 @@ public class BBSFrontController extends HttpServlet implements javax.servlet.Ser
 		ActionForward forward = null;
 		Action action = null;
 		
-		if(command.equals("")) {
-			action = null();
+		if(command.equals("/bbs/BBSAction.bbs")) {
+			action = new BBSAction();
+			try {
+				forward = action.execute(request, response);
+			} catch (Exception e) {
+				e.printStackTrace();
+			}
+		} else if(command.equals("/bbs/BBSWriteAction.bbs")) {
+			action = new BBSWriteAction();
 			try {
 				forward = action.execute(request, response);
 			} catch (Exception e) {
