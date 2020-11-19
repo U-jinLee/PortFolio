@@ -23,7 +23,6 @@ public class LoginDAO {
 	}
 	
 	public int login(LoginDTO ldto) {
-		System.out.println("dao");
 		String SQL = "select user_pw from portfolioTable where user_id=?";
 		try {			
 			pstmt = conn.prepareStatement(SQL);
@@ -43,6 +42,24 @@ public class LoginDAO {
 			if(conn != null) {try {conn.close();} catch (Exception e) {e.printStackTrace();}}
 		}
 		return -2;
+	}
+	
+	public void Join(LoginDTO ldto) {
+		System.out.println("dao");
+		String SQL = "insert into portfolioTable(user_id, user_pw) values(?,?)";
+		try {
+			pstmt = conn.prepareStatement(SQL);
+			pstmt.setString(1, ldto.getUser_id());
+			pstmt.setString(2, ldto.getUser_pw());
+			pstmt.executeUpdate();
+			
+		} catch (Exception e) {
+			e.printStackTrace();
+		} finally {
+			if(rs != null) {try {rs.close();} catch (Exception e) {e.printStackTrace();}}
+			if(pstmt != null) {try {pstmt.close();} catch (Exception e) {e.printStackTrace();}}
+			if(conn != null) {try {conn.close();} catch (Exception e) {e.printStackTrace();}}
+		}
 	}
 
 
