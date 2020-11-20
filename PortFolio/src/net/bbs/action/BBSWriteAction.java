@@ -21,7 +21,7 @@ public class BBSWriteAction implements Action {
 		bdao.writeBBS(bdto);
 		
 		forward.setRedirect(false);
-		forward.setPath("");
+		forward.setPath("writeSuccess.jsp");
 		return forward;
 	}
 

@@ -23,7 +23,9 @@ public class BBSDAO {
 		String SQL = "insert into portfoliobbstable(btitle, bcontent, bwriter) values(?,?,?)";
 		try {
 			pstmt = conn.prepareStatement(SQL);
-			
+			pstmt.setString(1, bdto.getBtitle());
+			pstmt.setString(2, bdto.getBcontent());
+			pstmt.setString(3, bdto.getBwriter());
 			pstmt.executeUpdate();
 		} catch (Exception e) {
 			e.printStackTrace();
